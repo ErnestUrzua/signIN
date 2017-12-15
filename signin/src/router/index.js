@@ -6,6 +6,7 @@ import Admin from '@/components/admin'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -13,7 +14,7 @@ export default new Router({
       component: Register
     },
     {
-      path: '/',
+      path: '/admin',
       name: 'admin',
       component: Admin
     }

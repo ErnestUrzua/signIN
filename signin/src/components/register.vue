@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div >
-    <a href="/register"><img src="https://ernesturzua.github.io/Docs/signIN_logo.png"></a>
+    <a><img src="https://ernesturzua.github.io/Docs/signIN_logo.png"></a>
     </div>
   
     <div class="form-group">
@@ -17,12 +17,12 @@
       <input type="text" class="form-control" v-validate="'required'" placeholder="Company" v-model="Company" name="company">
     </div>
    <div class="checkbox" align="left">
-                        <input id="officialVisit" type="checkbox">
-                        <label for="officialVisit">
-                            Official visit
-                        </label>
-                        <p align="left"</p>
-                    </div>
+      <input id="officialVisit" type="checkbox">
+      <label for="officialVisit">
+        Official visit
+      </label>
+      <p align="left"</p>
+    </div>
       
       <div class="checkbox" align="left">
         <input id="escort" type="checkbox">
