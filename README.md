@@ -27,7 +27,7 @@ git clone https://github.com/ErnestUrzua/signIN.git
 
 Change to the directory of the `signIN` dir on your VirtualBox Ubuntu virtual machine.
 
-`$ cd signIN`
+```$ cd signIN```
 
 clone it to your local machine.
 
@@ -39,16 +39,40 @@ These instructions assume an Ubuntu environment.
 
 **Install dependencies**
 in a new terminal window
-navigate to `./signIN/signin`
+navigate to ```./signIN/signin```
 
 **run the install script**
-`$ npm install` 
+```$ npm install``` 
 
 **start up the backend and frontend**
-`$ npm run dev`
+```$ npm run dev```
 
 at this point you are now able to point your browser to localhost:8080 to see the home page
 
+## Build Testing
+
+``` bash
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
+
+# build for production and view the bundle analyzer report
+npm run build --report
+
+# run unit tests
+npm run unit
+
+# run e2e tests
+npm run e2e
+
+# run all tests
+npm test
+```
 ## Non Functional analysis
 Based off this analysis sheet, **MEVN** stack is the most user friendly and is suitable for our application. Along with `bootstrap3.1` for the front end styling, this combination was the obvious choice given the short development time.
 ![developer tools](https://user-images.githubusercontent.com/4582375/30355067-b72ffe36-97e5-11e7-9786-5ada6d989cf6.png)
