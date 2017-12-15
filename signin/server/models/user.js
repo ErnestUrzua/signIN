@@ -1,9 +1,8 @@
 const mongoose = require('mongoose'),
-      Schema = mongoose.Schema,
-      bcrypt = require('bcryptjs')
+      Schema = mongoose.Schema
 
 var User = new Schema({
-  displayName: {
+  name: {
     type: String,
     required: true
   },
@@ -12,15 +11,6 @@ var User = new Schema({
     required: true,
     unique: true,
     trim: true
-  },
-  username: {
-    type: String,
-    required: true,
-    unique: true,
-    trim: true
-  },
-  password: {
-    type: String,
   },
   telephone: {
     type: String,
@@ -34,16 +24,12 @@ var User = new Schema({
     type: Boolean,
     required: true
   },
-  escortRequired: {
+  escort: {
     type: Boolean,
     required: true
   },
   escortName: {
     type: String,
-  },
-  createdOn: {
-    type: Date,
-    required: true
   }
 })
 
