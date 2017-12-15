@@ -5,16 +5,16 @@
     </div>
   
     <div class="form-group">
-      <input type="text" class="form-control" v-validate="'required'" placeholder="Name" v-model="Name" name="name">
+      <input type="text" class="form-control" placeholder="Name" v-model="name" name="name">
     </div>
     <div class="form-group">
-      <input type="text" class="form-control" v-validate="'required'" placeholder="Email" v-model="email" name="email">
+      <input type="text" class="form-control" placeholder="Email" v-model="email" name="email">
     </div>
     <div class="form-group">
-      <input type="text" class="form-control" v-validate="'required'" placeholder="Telephone" v-model="telephone" name="telephone">
+      <input type="text" class="form-control" placeholder="Telephone" v-model="telephone" name="telephone">
     </div>
     <div class="form-group">
-      <input type="text" class="form-control" v-validate="'required'" placeholder="Company" v-model="Company" name="company">
+      <input type="text" class="form-control" placeholder="Company" v-model="company" name="company">
     </div>
    <div class="checkbox" align="left">
       <input id="officialVisit" type="checkbox">
@@ -25,7 +25,7 @@
     </div>
       
       <div class="checkbox" align="left">
-        <input id="escort" type="checkbox">
+        <input id="escort" type="checkbox" v-model="escort">
         <label for="escort">
           Escort required
         </label>
@@ -33,7 +33,7 @@
       </div>
     
     <div class="form-group">
-      <input type="text" class="form-control" v-validate="'required'" placeholder="Escort name" v-model="escortName" name="escortName">
+      <input type="text" class="form-control" v-if="escort" placeholder="Escort name" v-model="escortName" name="escortName">
     </div>
     <button class="btn btn-primary" type="button" v-on:click="register">
       Register
@@ -43,9 +43,22 @@
 
 <script>
 export default {
-  // methods: {
+  name: 'register',
+  data () {
+    return {
+      name: '',
+      email: '',
+      telephone: '',
+      company: '',
+      officialVisit: false,
+      escort: false,
+      escortName: ''
+    }
+  },
+  methods: {
     // creates new user
-   /*  register () {
+    register () {
+      // eslint-disable-next-line
       const newUser = {
         name: this.name,
         email: this.email,
@@ -55,8 +68,12 @@ export default {
         escort: this.escort,
         escortName: this.escortName
       }
+      alert('Successfully submitted ' + this.name + '!')
+      // `event` is the native DOM event
+      if (event) {
+        alert(event.target.tagName)
+      }
     }
   }
-} */
 }
 </script>
